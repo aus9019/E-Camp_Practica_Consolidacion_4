@@ -1,0 +1,75 @@
+.container {
+  margin-top: 40px;
+}
+
+.rangos {
+  position: relative;
+  padding-left: 200px;
+}
+
+.rangos .line {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 60px;
+  width: 180px;
+  height: 100%;
+}
+
+.rangos .line::after {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background-color: rgb(236, 236, 236);
+  right: 30px;
+}
+
+.rangos .line::before {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: rgb(241, 218, 15);
+  content: "";
+  right: 26px;
+  z-index: 5;
+}
+
+.rangos .line p {
+  margin-bottom: 0;
+}
+
+.rangos .cuadros {
+  padding: 30px 30px 25px;
+  margin-top: 15px;
+  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  border: 1px solid rgb(148, 148, 148);
+}
+
+.rangos .cuadros .circulo {
+  height: 30px;
+  flex: 0 0 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.rangos .cuadros .info p {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 575px) {
+  .rangos {
+    padding-left: 100px;
+  }
+
+  .rangos .line {
+    width: 100px;
+  }
+
+  .rangos .cuadros {
+    padding: 20px;
+  }
+}
